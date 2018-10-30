@@ -1,7 +1,7 @@
 var connection = require('./connection.js');
 
 function objToSql(ob) {
-	// column1=value, column2=value2,...
+
 	var arr = [];
 
 	for (var key in ob) {
@@ -38,7 +38,7 @@ var orm = {
 		queryString = queryString + condition;
 		console.log(condition);
 
-		// console.log(queryString);
+	
 		connection.query(queryString, function (err, result) {
 			if (err) throw err;
 			cb(result);
